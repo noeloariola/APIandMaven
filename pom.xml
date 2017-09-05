@@ -4,6 +4,15 @@
   <artifactId>APIandMaven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+	<dependency>
+	    <groupId>org.postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>42.1.1</version>
+	</dependency>
+  	
+  </dependencies>
   <build>
     <testSourceDirectory>src/main/test</testSourceDirectory>
     <resources>
@@ -19,14 +28,15 @@
           <exclude>**/*.java</exclude>
         </excludes>
       </resource>
-    </resources>
+    </resources>	
     <plugins>
       <plugin>
+      	<groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.3</version>
+        <version>3.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
       </plugin>
       <plugin>
@@ -35,4 +45,8 @@
       </plugin>
     </plugins>
   </build>
+  	<properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+  
 </project>

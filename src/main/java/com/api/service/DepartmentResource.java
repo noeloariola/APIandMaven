@@ -41,7 +41,7 @@ public class DepartmentResource {
 	private DepartmentAbst department;
 	
 	@GET
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response get() throws SQLException {
 		department = new DepartmentImplem();
 		List<Department> list = department.getAllDepartment();

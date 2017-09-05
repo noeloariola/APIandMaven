@@ -19,7 +19,7 @@ public class DepartmentImplem extends DepartmentAbst{
 	public List<Department> getAllDepartment() throws SQLException {
 		List<Department> list = new ArrayList<>();
 		conn =  dbManager.JDBCConnection();
-		String sql = "SELECT id, title FROM department";
+		String sql = "SELECT id, title FROM public.department";
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(sql);
 		
@@ -53,7 +53,7 @@ public class DepartmentImplem extends DepartmentAbst{
 	@Override
 	public void post(String title) throws SQLException {
 		System.out.println("POST METHOD______________________________________");
-		String sql = "INSERT INTO department(title)values(?)";
+		String sql = "INSERT INTO public.department(title)values(?)";
 		conn =  dbManager.JDBCConnection();
 		PreparedStatement pst = conn.prepareStatement(sql);
 		
