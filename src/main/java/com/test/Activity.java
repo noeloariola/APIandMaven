@@ -2,12 +2,17 @@ package com.test;
 
 public class Activity {
 	public static void main(String[] args) {
-		for(int i = 1 ; i < 6; i++){
-			for(int x = i; x < i; x++) {
-				System.out.print(x);
+		int argu = 6;
+		for(int num = 1 ; num < argu; num++){
+			int curr = num;
+			while(curr < (argu)) {
+				System.out.print(" ");
+				curr++;
+			}
+			for(int x = 0; x < num; x++) {
+				System.out.print(num+ " ");
 			}
 			System.out.println();
-			
 		}
 	}
 	
